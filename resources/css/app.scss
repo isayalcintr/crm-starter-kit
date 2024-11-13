@@ -1,0 +1,182 @@
+/* Main style */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../metronic/css/demos/demo1.css";
+
+/* Keenicons */
+@import "../metronic/vendors/keenicons/duotone/style.css";
+@import "../metronic/vendors/keenicons/filled/style.css";
+@import "../metronic/vendors/keenicons/outline/style.css";
+@import "../metronic/vendors/keenicons/solid/style.css";
+
+.just-validate-error-field {
+    @apply border-red-900 outline-red-900;
+}
+.just-validate-error-label {
+    @apply text-2sm font-normal text-red-900;
+}
+
+.choices {
+    margin-bottom: 0 !important;
+    font-size: 0.75rem !important;
+    .choices__inner {
+        min-height: 2rem !important;
+        padding: 0 0.625rem !important;
+        background-size: 14px 10px !important;
+        background-position: right 0.55rem center !important;
+        background-color: var(--tw-light-active) !important;
+        color: var(--tw-gray-700) !important;
+        border-radius: 0.375rem !important;
+        border: 1px solid var(--tw-gray-300) !important;
+    }
+}
+.dt-container {
+    .table-body {
+        @apply scrollable-x-auto;
+    }
+}
+.dataTable-bottom {
+    @apply flex justify-between items-center px-2 py-4 text-gray-600 text-2sm font-medium;
+
+    div {
+        @apply w-1/3;
+    }
+
+    select {
+        @apply select select-sm w-[55px] inline-block mx-2;
+    }
+
+    .dt-length{
+        @apply w-full;
+    }
+
+    .dataTable-page-info {
+        @apply text-center;
+
+        .dt-info {
+            @apply w-full;
+        }
+    }
+
+    .dataTable-pagination {
+        .dt-paging {
+            @apply w-full;
+        }
+
+        nav {
+            @apply w-full flex justify-end items-center gap-1;
+        }
+
+        .dt-paging {
+            @apply inline-block;
+        }
+
+        button {
+            display: inline-flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            height: 1.875rem;
+            width: 1.875rem;
+            font-size: .8125rem;
+            padding: 0;
+            line-height: 0;
+            @apply rounded-full;
+
+            &.current {
+                background-color: var(--tw-gray-200);
+            }
+        }
+
+        .last, .first {
+            display: none;
+        }
+    }
+
+    .dt-paging-button .disabled {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        cursor: pointer;
+    }
+
+    .dt-paging-button .previous::before {
+        content: '←';
+        @apply font-bold;
+    }
+
+    .dt-paging-button .next::before {
+        content: '→';
+        @apply font-bold;
+    }
+}
+
+
+//.dt-container {
+//    //.dt-layout-end .dt-search,
+//    .dt-layout-row:first-child,
+//    {
+//        @apply hidden;
+//    }
+//    table {
+//        tr td.dt-empty{
+//            @apply text-center py-4 text-gray-600 text-2sm font-medium;
+//        }
+//    }
+//    div:nth-child(3) {
+//        @apply m-2 flex justify-between gap-3 text-gray-600 text-2sm font-medium;
+//    }
+//}
+//#dt-processing {
+//    div:last-child div{
+//        display: none !important;
+//    }
+//}
+
+.separator {
+    @apply w-full my-4 border-t border-secondary;
+}
+
+.use-spinner {
+    @apply relative;
+
+    .spinner-wrapper {
+        @apply absolute top-0 left-0 w-full h-full z-5 bg-slate-800 bg-opacity-10 flex items-center justify-center gap-2 cursor-wait;
+    }
+
+    &:not(.spinner-active) .spinner-wrapper {
+        @apply hidden;
+    }
+}
+.swal2-actions {
+    @apply mt-2 bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 w-full justify-start mt-0 col-start-1 col-end-3;
+}
+.swal2-actions button {
+    @apply btn btn-sm;
+}
+.swal2-html-container {
+    margin-bottom: 1rem !important;
+    margin-top: 1rem !important;
+    @apply sm:mt-0 m-0 text-center sm:text-left text-sm text-gray-500 pl-4 sm:pl-0 pr-4 pb-4 sm:pr-6 sm:pb-4 sm:ml-4 col-start-1 sm:col-start-2 col-end-3;
+}
+.swal2-title {
+    @apply p-0 pt-3 text-center sm:text-left text-base font-semibold leading-6 text-gray-900 pl-4 pr-4 sm:pr-6 sm:pl-0 sm:pt-6 sm:ml-4 col-start-1 sm:col-start-2 col-end-3;
+}
+.swal2-popup {
+    display: flex !important;
+    @apply relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg p-0 grid-cols-none flex-col items-center justify-center;
+}
+
+
+.rotate-y {
+    animation: rotateY 2s infinite linear !important;
+}
+@keyframes rotateY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
