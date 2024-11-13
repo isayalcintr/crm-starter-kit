@@ -145,16 +145,16 @@ const createOfferForm = ({ formSelector, type = formValidTypes.other }) => {
                 {data: 'quantity', orderable: false},//3
                 {data: 'unit_id', orderable: false},//4
                 {data: 'price', orderable: false},//5
-                {data: 'discount1', orderable: false, visible: false},//6
+                {data: 'discount1', orderable: false},//6
                 {data: 'discount1_price', orderable: false},//7
-                {data: 'discount2', orderable: false, visible: false},//8
+                {data: 'discount2', orderable: false},//8
                 {data: 'discount2_price', orderable: false},//9
-                {data: 'discount3', orderable: false, visible: false},//10
-                {data: 'discount3_price', orderable: false, visible: false},//11
-                {data: 'discount4', orderable: false, visible: false},//12
-                {data: 'discount4_price', orderable: false, visible: false},//13
-                {data: 'discount5', orderable: false, visible: false},//14
-                {data: 'discount5_price', orderable: false, visible: false},//15
+                {data: 'discount3', orderable: false},//10
+                {data: 'discount3_price', orderable: false},//11
+                {data: 'discount4', orderable: false},//12
+                {data: 'discount4_price', orderable: false},//13
+                {data: 'discount5', orderable: false},//14
+                {data: 'discount5_price', orderable: false},//15
                 {data: 'vat_rate', orderable: false},//16
                 {data: null, orderable: false},//16
                 {data: null, orderable: false},//18
