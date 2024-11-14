@@ -27,7 +27,7 @@ class BootstrapSeeder extends Seeder
 
         //Admin Kullanıcı
         $adminUser = User::firstOrCreate([
-            'email' => 'yalcni87@gmail.com',
+            'email' => 'admin@demo.com',
         ], [
             'name' => 'İsa',
             'surname' => 'Yalçın',
